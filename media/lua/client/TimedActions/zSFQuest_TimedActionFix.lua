@@ -1,11 +1,12 @@
-require "TimedActions/ISCraftAction"
+-- already present in new update from SQS
+-- require "TimedActions/ISCraftAction"
 
-local untouched = ISCraftAction.perform;
-function ISCraftAction:perform()
-    untouched(self);
-    SF_MissionPanel.instance:checkQuestForCompletionByType("item", nil, "Obtained");
-    print("ISCraftAction Successful overwrite");
-end
+-- local untouched = ISCraftAction.perform;
+-- function ISCraftAction:perform()
+--     untouched(self);
+--     SF_MissionPanel.instance:checkQuestForCompletionByType("item", nil, "Obtained");
+--     print("ISCraftAction Successful overwrite");
+-- end
 
 local function postAddItem()
     SF_MissionPanel.instance:checkQuestForCompletionByType("item", nil, "Obtained");
